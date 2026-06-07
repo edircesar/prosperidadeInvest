@@ -24,7 +24,7 @@ export function ResultDashboard({ result, months }: ResultDashboardProps) {
       return (
         <div className="bg-white p-3 border border-gray-100 shadow-lg rounded-xl">
           <p className="text-sm font-medium text-gray-900 mb-1">Mês {label}</p>
-          <p className="text-sm text-[#1E88E5]">
+          <p className="text-sm text-[#43A047]">
             Acumulado: {formatCurrency(payload[0].value)}
           </p>
           {payload[1] && (
@@ -45,7 +45,7 @@ export function ResultDashboard({ result, months }: ResultDashboardProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="bg-[#F8FAFC] rounded-2xl p-5 border border-gray-100">
           <p className="text-sm text-gray-500 font-medium mb-1">Valor Futuro (Total)</p>
-          <p className="text-2xl font-bold text-[#1E88E5]">{formatCurrency(result.futureValue)}</p>
+          <p className="text-2xl font-bold text-[#43A047]">{formatCurrency(result.futureValue)}</p>
         </div>
         <div className="bg-[#F8FAFC] rounded-2xl p-5 border border-gray-100">
           <p className="text-sm text-gray-500 font-medium mb-1">Valor Investido</p>
@@ -66,15 +66,15 @@ export function ResultDashboard({ result, months }: ResultDashboardProps) {
           <AreaChart data={result.evolution} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id="colorAcumulado" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#1E88E5" stopOpacity={0.2}/>
-                <stop offset="95%" stopColor="#1E88E5" stopOpacity={0}/>
+                <stop offset="5%" stopColor="#43A047" stopOpacity={0.2}/>
+                <stop offset="95%" stopColor="#43A047" stopOpacity={0}/>
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
             <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{fill: '#6B7280', fontSize: 12}} />
             <YAxis tickFormatter={(val) => `R$${(val/1000).toFixed(0)}k`} axisLine={false} tickLine={false} tick={{fill: '#6B7280', fontSize: 12}} width={70} />
             <Tooltip content={<CustomTooltip />} />
-            <Area type="monotone" dataKey="accumulated" name="Capital Acumulado" stroke="#1E88E5" strokeWidth={3} fillOpacity={1} fill="url(#colorAcumulado)" />
+            <Area type="monotone" dataKey="accumulated" name="Capital Acumulado" stroke="#43A047" strokeWidth={3} fillOpacity={1} fill="url(#colorAcumulado)" />
             <Area type="monotone" dataKey="capital" name="Capital Investido" stroke="#9CA3AF" strokeWidth={2} strokeDasharray="5 5" fill="none" />
           </AreaChart>
         </ResponsiveContainer>

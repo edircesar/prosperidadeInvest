@@ -119,7 +119,7 @@ export function ComparativeSimulator() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {results.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-[#1E88E5]" style={{backgroundColor: idx === 0 ? '#ef4444' : idx === 1 ? '#3b82f6' : '#22c55e'}}></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#43A047]" style={{backgroundColor: idx === 0 ? '#ef4444' : idx === 1 ? '#10B981' : '#22c55e'}}></div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{item.name}</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center border-b border-gray-50 pb-2">
@@ -132,7 +132,7 @@ export function ComparativeSimulator() {
                     </div>
                     <div className="flex justify-between items-center pt-1">
                       <span className="text-sm font-semibold text-gray-700">Acumulado</span>
-                      <span className="font-bold text-lg text-[#1E88E5]">{formatCurrency(item.result.futureValue)}</span>
+                      <span className="font-bold text-lg text-[#43A047]">{formatCurrency(item.result.futureValue)}</span>
                     </div>
                   </div>
                 </div>

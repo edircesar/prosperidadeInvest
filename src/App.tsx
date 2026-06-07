@@ -5,7 +5,7 @@ import { AprendaAProsperar } from './components/AprendaAProsperar';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-[#1E88E5] selection:text-white">
+    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-[#43A047] selection:text-white">
       <Header />
       
       <main>
@@ -18,7 +18,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <h2 className="text-xl font-bold tracking-tight mb-2">
-              Prosperidade <span className="text-[#1E88E5]">Investimentos</span>
+              Prosperidade <span className="text-[#43A047]">Investimentos</span>
             </h2>
             <p className="text-gray-400 text-sm max-w-sm">
               Ferramenta educacional para simulação de juros compostos. Os resultados são estimativas limitadas e não configuram recomendação de investimento.

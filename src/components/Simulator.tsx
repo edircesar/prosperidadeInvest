@@ -73,7 +73,7 @@ export function Simulator() {
             onClick={() => { setActiveTab('curto'); setResult(null); setMonths(12); }}
             className={cn(
               "flex-1 py-3 px-6 rounded-2xl font-medium transition-all",
-              activeTab === 'curto' ? "bg-[#1E88E5] text-white shadow-md" : "text-gray-600 hover:bg-gray-50"
+              activeTab === 'curto' ? "bg-[#43A047] text-white shadow-md" : "text-gray-600 hover:bg-gray-50"
             )}
           >
             Curto Prazo
@@ -82,7 +82,7 @@ export function Simulator() {
             onClick={() => { setActiveTab('longo'); setResult(null); setMonths(120); }}
             className={cn(
               "flex-1 py-3 px-6 rounded-2xl font-medium transition-all",
-              activeTab === 'longo' ? "bg-[#1E88E5] text-white shadow-md" : "text-gray-600 hover:bg-gray-50"
+              activeTab === 'longo' ? "bg-[#43A047] text-white shadow-md" : "text-gray-600 hover:bg-gray-50"
             )}
           >
             Longo Prazo
@@ -105,7 +105,7 @@ export function Simulator() {
                       required
                       value={initialValue}
                       onChange={(e) => setInitialValue(Number(e.target.value))}
-                      className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-[#1E88E5] focus:border-[#1E88E5] transition-colors outline-none font-medium text-gray-900"
+                      className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-[#43A047] focus:border-[#43A047] transition-colors outline-none font-medium text-gray-900"
                     />
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export function Simulator() {
                       step="1"
                       value={monthlyContribution}
                       onChange={(e) => setMonthlyContribution(Number(e.target.value))}
-                      className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-[#1E88E5] focus:border-[#1E88E5] transition-colors outline-none font-medium text-gray-900"
+                      className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-[#43A047] focus:border-[#43A047] transition-colors outline-none font-medium text-gray-900"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export function Simulator() {
                   <select 
                     value={investmentType}
                     onChange={(e) => setInvestmentType(e.target.value)}
-                    className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 px-4 focus:ring-2 focus:ring-[#1E88E5] focus:border-[#1E88E5] transition-colors outline-none font-medium text-gray-900 appearance-none"
+                    className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl py-3 px-4 focus:ring-2 focus:ring-[#43A047] focus:border-[#43A047] transition-colors outline-none font-medium text-gray-900 appearance-none"
                   >
                     <option value="cdi_100">CDI (Atual: {taxasData.cdiAtualEstimado}% a.a.)</option>
                     <option value="cdb_95">CDB Conservador (95% do CDI)</option>
@@ -155,8 +155,8 @@ export function Simulator() {
                         className={cn(
                           "py-2 px-3 text-sm rounded-lg font-medium transition-all border",
                           months === opt.value 
-                            ? "bg-[#E3F2FD] border-[#1E88E5] text-[#1E88E5]" 
-                            : "bg-white border-gray-200 text-gray-600 hover:border-[#1E88E5] hover:bg-gray-50"
+                            ? "bg-[#E8F5E9] border-[#43A047] text-[#43A047]" 
+                            : "bg-white border-gray-200 text-gray-600 hover:border-[#43A047] hover:bg-gray-50"
                         )}
                       >
                         {opt.label}
@@ -172,7 +172,7 @@ export function Simulator() {
               <button 
                 type="submit"
                 disabled={isSimulating}
-                className="w-full bg-[#1E88E5] hover:bg-[#1565C0] text-white font-bold text-lg py-4 px-8 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2 disabled:opacity-70"
+                className="w-full bg-[#43A047] hover:bg-[#388E3C] text-white font-bold text-lg py-4 px-8 rounded-xl transition-colors shadow-md flex justify-center items-center gap-2 disabled:opacity-70"
               >
                 {isSimulating ? (
                   <span className="animate-pulse">Calculando o futuro...</span>

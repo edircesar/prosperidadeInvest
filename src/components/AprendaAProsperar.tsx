@@ -4,7 +4,7 @@ const cards = [
   {
     title: 'O que é CDI?',
     description: 'Certificado de Depósito Interbancário (CDI) é a taxa que os bancos cobram para emprestar dinheiro uns aos outros. É o principal termômetro para os investimentos de Renda Fixa no Brasil.',
-    icon: <BookOpen className="text-[#1E88E5]" size={24} />,
+    icon: <BookOpen className="text-[#43A047]" size={24} />,
   },
   {
     title: 'O que é CDB?',
@@ -19,7 +19,7 @@ const cards = [
   {
     title: 'Por que investir cedo?',
     description: 'O tempo é o maior aliado dos juros compostos. Começar com pouco agora pode gerar muito mais retorno do que começar com muito daqui a 10 anos. A consistência é o segredo.',
-    icon: <Clock className="text-[#1E88E5]" size={24} />,
+    icon: <Clock className="text-[#43A047]" size={24} />,
   }
 ];
 
