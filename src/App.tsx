@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfUse } from './pages/TermsOfUse';
+import { Contact } from './pages/Contact';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/privacidade" element={<PrivacyPolicy />} />
             <Route path="/termos" element={<TermsOfUse />} />
+            <Route path="/contato" element={<Contact />} />
           </Routes>
         </div>
 
@@ -33,9 +35,11 @@ export default function App() {
                 <Link to="/privacidade" className="hover:text-white transition-colors">Política de Privacidade</Link>
                 <span>&bull;</span>
                 <Link to="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
+                <span>&bull;</span>
+                <Link to="/contato" className="hover:text-white transition-colors">Contato</Link>
               </div>
               <div className="text-sm text-gray-500">
-                &copy; {new Date().getFullYear()} Prosperidade Investimentos. Contato: <a href="mailto:cesar@projeto7.com" className="hover:text-white transition-colors">cesar@projeto7.com</a>
+                &copy; {new Date().getFullYear()} Prosperidade Investimentos.
               </div>
             </div>
           </div>

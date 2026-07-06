@@ -27,6 +27,7 @@ export function Header() {
                 <Link to="/#educacional" className="text-gray-600 hover:text-[#43A047] transition-colors font-medium">Aprenda a Prosperar</Link>
               </>
             )}
+            <Link to="/contato" className="text-gray-600 hover:text-[#43A047] transition-colors font-medium">Contato</Link>
           </nav>
         </div>
       </div>
